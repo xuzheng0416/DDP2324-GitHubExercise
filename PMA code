@@ -1,0 +1,45 @@
+""" 
+database items: Restaurant, Menu, Food
+  Restaurant items: id(type_integer), name(type_text), image(type_text)
+  Menu: id(type_integer), name(type_text), description(type_text), date(type_text), restaurant_id(type_integer)
+  Food: id(type_integer), name(type_text), price(type_text), menu_id(type_integer)
+
+"""
+# Flask learning #
+# Using the Flask reference the Flask Guide
+# https://flask.palletsprojects.com/en/3.0.x/ 
+
+# Create a project folder and a .venv folder within: #
+$ mkdir myproject
+$ cd myproject
+$ python3 -m venv .venv
+
+# Activate the environment #
+$ . .venv/bin/activate
+
+# Install Flask #
+$ pip install Flask
+
+# Imports the os module of Python, which is used for interacting with the operating system, such as performing file operations.#
+import os
+
+# Imports the sqlite3 module of Python, which is used for interacting with SQLite databases.#
+import sqlite3
+
+# Imports the click library, which is a Python library used for creating command-line interface (CLI) applications.
+import click
+
+# Imports the date class from the datetime module, which is used for representing dates.#
+from datetime import date
+
+"""
+Imports several commonly used objects and functions from the Flask framework:
+
+Flask: The Flask class, used for creating a Flask application.
+render_template: A function used for rendering template files, typically used to return HTML pages.
+request: Represents the client's HTTP request, allowing access to request parameters, headers, etc.
+current_app: Represents the current Flask application context, which can be used when handling requests.
+g: The Flask context variable, typically used for storing global variables.
+
+"""
+from flask import Flask,render_template,request,current_app,g
